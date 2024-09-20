@@ -19,7 +19,7 @@
     ></script>
   </head>
   <body>
-    <main class="flex justify-center">
+    <main class="flex justify-center min-h-screen items-center">
       <!-- client's actions -->
       <div class="mockup-phone">
         <div class="camera"></div>
@@ -28,18 +28,18 @@
             <div class="stats shadow">
               <div class="stat">
                 <div class="stat-desc text-lg">Available Balance</div>
-                <div class="stat-value">
+                <div class="stat-value text-3xl">
                   $<span id="total-money">7400</span>
                 </div>
               </div>
               <div class="flex items-center px-3">
-                <button id="log-out-btn" class="btn btn-lg">Log Out</button>
+                <button id="log-out-btn" class="btn btn-primary text-lg font-bold">Log Out</button>
               </div>
             </div>
 
             <div class="divider"></div>
             <div class="w-5/6 flex flex-col text-center items-center">
-              <h2 class="text-2xl font-bold">welcome to Payooo!</h2>
+              <h2 class="text-3xl font-bold text-yellow-600">Welcome to Payooo!</h2>
               <p class="text-lg mt-2">
                 Enjoy easy and convenient financial services with us. Cashout
                 charge is low and
@@ -47,13 +47,13 @@
             </div>
             <div class="divider"></div>
 
-            <div class="grid grid-cols-2 gap-6 w-5/6 mx-auto">
+            <div class="grid grid-cols-2 gap-8 w-5/6 mx-auto">
               <!-- add money -->
               <div>
                 <label
                   id="show-add-amount-btn"
                   for="my_modal_7"
-                  class="btn btn-lg w-max"
+                  class="btn btn-lg w-max font-bold bg-yellow-400 text-2xl"
                   >Add Money</label
                 >
                 <input type="checkbox" id="my_modal_7" class="modal-toggle" />
@@ -97,7 +97,7 @@
              
               <!-- Cash Out -->
               <div>
-<button class="btn btn-lg" onclick="my_modal_2.showModal()">Cash Out</button>
+<button class="btn btn-lg font-bold bg-yellow-400 text-2xl" onclick="my_modal_2.showModal()">Cash Out</button>
 <dialog id="my_modal_2" class="modal">
   <div class="modal-box bg-blue-300">
     <form class="card-body">
@@ -125,7 +125,7 @@
               </div>
               <!-- Transaction history -->
             <div>
-      <button id="transaction-history" class="btn btn-lg" onclick="my_modal_5.showModal()">Transaction</button>
+      <button id="transaction-history" class="btn btn-lg font-bold bg-yellow-400 text-2xl" onclick="my_modal_5.showModal()">Transaction</button>
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
          <div id="transaction-container" class="modal-box bg-blue-300">
          
