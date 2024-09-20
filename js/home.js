@@ -1,6 +1,6 @@
 // for log out
 document.getElementById('log-out-btn').addEventListener('click', function(){
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 })
 
 // add money in account
@@ -27,9 +27,13 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
             <p id="deposit" class="text-xl py-4 font-semibold">Cash Out Money : ${amountDeposit}</p>
            `
            document.querySelector('#transaction-container').prepend(div);
+           document.getElementById('my_modal_1').close();
     }
     else{
         alert('Failed to add money.Please Try again!')
     }
 })
 
+function addMoney(){
+    document.getElementById('my_modal_3').close();
+}

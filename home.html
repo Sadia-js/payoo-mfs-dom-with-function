@@ -8,8 +8,7 @@
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- font awesome -->
@@ -17,8 +16,20 @@
       src="https://kit.fontawesome.com/f1872612b9.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      :root:has(
+      :is(
+          .modal-open,
+          .modal:target,
+          .modal-toggle:checked + .modal,
+          .modal[open]
+        )
+    ) {
+    scrollbar-gutter: unset; 
+  }
+  </style>
   </head>
-  <body>
+  <body class="overflow-hidden">
     <main class="flex justify-center min-h-screen items-center">
       <!-- client's actions -->
       <div class="mockup-phone">
@@ -49,56 +60,37 @@
 
             <div class="grid grid-cols-2 gap-8 w-5/6 mx-auto">
               <!-- add money -->
-              <div>
-                <label
-                  id="show-add-amount-btn"
-                  for="my_modal_7"
-                  class="btn btn-lg w-max font-bold bg-yellow-400 text-2xl"
-                  >Add Money</label
-                >
-                <input type="checkbox" id="my_modal_7" class="modal-toggle" />
-                <div id="add-money-form" class="modal" role="dialog">
+              <div> 
+                <button class="btn btn-lg font-bold bg-yellow-400 text-2xl w-max" onclick="my_modal_1.showModal()">Add Money</button>
+                <dialog id="my_modal_1" class="modal">
                   <div class="modal-box bg-blue-300">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Add Amount</span>
                         </label>
-                        <input
-                          id="amount-deposit"
-                          type="text"
-                          placeholder="Amount"
-                          class="input input-bordered"
-                          required
-                        />
+                        <input id="amount-deposit" type="text" placeholder="Amount" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
-                          <span class="label-text">Pin Code</span>
+                          <span class="label-text">Pin Number</span>
                         </label>
-                        <input
-                          id="amount-pin"
-                          type="password"
-                          placeholder="4 digits pin code"
-                          class="input input-bordered"
-                          required
-                        />
+                        <input id="amount-pin" type="password" placeholder="4 digits pin code" class="input input-bordered" required />
                       </div>
                       <div class="form-control mt-6">
-                        <button id="add-money-btn" class="btn btn-primary">
-                          Add Money
-                        </button>
+                        <button id="add-money-btn" class="btn btn-primary">Add Money</button>
                       </div>
                     </form>
                   </div>
-                  <label class="modal-backdrop" for="my_modal_7">Close</label>
-                </div>
-              </div>
-             
+                  <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                  </form>
+                </dialog>
+              </div> 
               <!-- Cash Out -->
-              <div>
-<button class="btn btn-lg font-bold bg-yellow-400 text-2xl" onclick="my_modal_2.showModal()">Cash Out</button>
-<dialog id="my_modal_2" class="modal">
+             <div> 
+           <button class="btn btn-lg font-bold bg-yellow-400 text-2xl" onclick="my_modal_2.showModal()">Cash Out</button>
+           <dialog id="my_modal_2" class="modal">
   <div class="modal-box bg-blue-300">
     <form class="card-body">
       <div class="form-control">
@@ -121,10 +113,10 @@
   <form method="dialog" class="modal-backdrop">
     <button>close</button>
   </form>
-</dialog>
-</div>
+          </dialog>
+             </div> 
 <!-- Transaction history -->
- <div>
+<div>
        <button id="transaction-history" class="btn btn-lg font-bold bg-yellow-400 text-2xl" onclick="my_modal_5.showModal()">Transaction</button>
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
          <div id="transaction-container" class="modal-box bg-blue-300">
@@ -136,7 +128,7 @@
     </div>
   </div>
 </dialog>
-</div>
+</div> 
   </div>
  </div>
 </div>

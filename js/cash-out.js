@@ -25,6 +25,7 @@ document.getElementById('cash-out-btn').addEventListener('click', function(event
          <p id="deposit" class="text-xl py-4 font-semibold">Cash Out Money : ${amount}</p>
         `
         document.querySelector('#transaction-container').prepend(div);
+        document.getElementById('my_modal_2').close();
     }
     else{
         alert('Failed to cash out.Please Try again!');
