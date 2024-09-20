@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS</title>
+    <!-- Daisy ui nad tailwind link -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <!-- entire -->
+                <div class="card bg-blue-300 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Mobile Number</span>
+                        </label>
+                        <input id="phone-number" type="text" placeholder="Enter your phone number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin Number</span>
+                        </label>
+                        <input id="entry-pin-code" type="password" placeholder="Pin number 4 digits" class="input input-bordered" required />
+
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="log-in-btn" class="btn btn-primary">Log in</button>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+    </main>
+
+    <!-- scripts -->
+     <script src="/js/utilities.js"></script>
+     <script src="/js/log-in.js"></script>
+</body>
+</html>

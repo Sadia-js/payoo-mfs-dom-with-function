@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Counter</title>
+    <!-- Daisy ui nad tailwind link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/f1872612b9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <!-- client's actions -->
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-desc text-lg">Available Balance</div>
+                <div class="stat-value">
+                  $<span id="total-money">7400</span>
+                </div>
+              </div>
+              <div class="flex items-center px-3">
+                <button id="log-out-btn" class="btn btn-lg">Log Out</button>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="w-5/6 flex flex-col text-center items-center">
+              <h2 class="text-2xl font-bold">welcome to Payooo!</h2>
+              <p class="text-lg mt-2">
+                Enjoy easy and convenient financial services with us. Cashout
+                charge is low and
+              </p>
+            </div>
+            <div class="divider"></div>
+
+            <div class="grid grid-cols-2 gap-6 w-5/6 mx-auto">
+              <!-- add money -->
+              <div>
+                <label
+                  id="show-add-amount-btn"
+                  for="my_modal_7"
+                  class="btn btn-lg w-max"
+                  >Add Money</label
+                >
+                <input type="checkbox" id="my_modal_7" class="modal-toggle" />
+                <div id="add-money-form" class="modal" role="dialog">
+                  <div class="modal-box bg-blue-300">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Add Amount</span>
+                        </label>
+                        <input
+                          id="amount-deposit"
+                          type="text"
+                          placeholder="Amount"
+                          class="input input-bordered"
+                          required
+                        />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin Code</span>
+                        </label>
+                        <input
+                          id="amount-pin"
+                          type="password"
+                          placeholder="4 digits pin code"
+                          class="input input-bordered"
+                          required
+                        />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="add-money-btn" class="btn btn-primary">
+                          Add Money
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <label class="modal-backdrop" for="my_modal_7">Close</label>
+                </div>
+              </div>
+             
+              <!-- Cash Out -->
+              <div>
+<button class="btn btn-lg" onclick="my_modal_2.showModal()">Cash Out</button>
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box bg-blue-300">
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Cash Out</span>
+        </label>
+        <input id="cash-out-money" type="text" placeholder="Amount" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Pin Number</span>
+        </label>
+        <input id="cash-out-pin" type="password" placeholder="4 digits pin code" class="input input-bordered" required />
+      </div>
+      <div class="form-control mt-6">
+        <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+      </div>
+    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+              </div>
+              <!-- Transaction history -->
+            <div>
+      <button id="transaction-history" class="btn btn-lg" onclick="my_modal_5.showModal()">Transaction</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+         <div id="transaction-container" class="modal-box bg-blue-300">
+         
+ <div class="modal-action">
+      <form method="dialog">
+        <button class="btn text-lg">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="/js/utilities.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/cash-out.js"></script>
+    <script src="/js/features.js"></script>
+  </body>
+</html>
