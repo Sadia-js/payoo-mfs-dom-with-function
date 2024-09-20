@@ -4,7 +4,7 @@ document.getElementById('log-in-btn').addEventListener('click', function(event){
     const entryPinCode = getInputFieldValueById('entry-pin-code');
 
     if(entryPinCode === '1234' && phoneNumber === '24'){
-        window.location.href = "/home.html";
+        window.location.href = "./home.html";
     }
     else{
         alert('Incorrect Access. Try Again!');
